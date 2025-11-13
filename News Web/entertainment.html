@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entertainment | PulsePoint News</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- Global Styles --- */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #222;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      max-width: 1200px;
+      align-items: center;
+    }
+
+    .site-title a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ff3366;
+    }
+
+    /* Header Section */
+    .section-header {
+      background: linear-gradient(to right, #990033, #ff3366);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px 70px;
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .section-header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Articles Section */
+    .articles {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 60px 40px;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .feed {
+      flex: 3;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      width: 360px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h4 {
+      color: #990033;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .card-body p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .read-btn {
+      display: inline-block;
+      background: #ff3366;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .read-btn:hover {
+      background: #cc0044;
+    }
+
+    /* Sidebar */
+    .side {
+      flex: 1;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      height: fit-content;
+    }
+
+    .side h4 {
+      color: #990033;
+      margin-bottom: 10px;
+    }
+
+    .side .small {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .side hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 20px 0;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #33001a;
+      color: #fff;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .articles {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .side {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  </style>
+</head>
+
+<body class="entertainment-page">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="site-title"><a href="./index.html">PulsePoint News</a></h2>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="editorial.html">Editorial</a>
+        <a href="entertainment.html" class="active">Entertainment</a>
+        <a href="sports.html">Sports</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="caricature.html">Caricature</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="section-header">
+    <h1>Entertainment</h1>
+    <p>Celebrity stories, film festivals, and everything that moves the spotlight.</p>
+  </header>
+
+  <!-- Articles Section -->
+  <section class="articles">
+    <div class="feed">
+      <article class="card">
+        <img src="entertainment.jpg" alt="Pop Icon Album">
+        <div class="card-body">
+          <h4>Pop Icon Releases Surprise Album</h4>
+          <p>The artist dropped an unexpected record overnight — fans have mixed reactions and critics are lining up reviews.</p>
+          <a href="#" class="read-btn">Read More</a>
+        </div>
+<div class="card-body">
+          <h4>Pop Icon Releases Surprise Album</h4>
+          <p>The artist dropped an unexpected record overnight — fans have mixed reactions and critics are lining up reviews.</p>
+          <a href="#" class="read-btn">Read More</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="entertainment2.jpg" alt="Film Festival">
+        <div class="card-body">
+          <h4>Film Festival Spotlight: Rising Talent</h4>
+          <p>Independent filmmakers are stealing the show with inventive storytelling and fresh perspectives.</p>
+          <a href="#" class="read-btn">Read More</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1200" alt="Concert Energy">
+        <div class="card-body">
+          <h4>Concert Season Kicks Off with Record Attendance</h4>
+          <p>Major cities across the globe are hosting massive live events as fans return to the music scene in full force.</p>
+          <a href="#" class="read-btn">Read More</a>
+        </div>
+      </article>
+    </div>
+
+    <aside class="side">
+      <h4>🎥 Red Carpet</h4>
+      <p class="small">Photos and glamorous looks from last night’s awards ceremony.</p>
+      <hr>
+      <h4>🎶 Concerts</h4>
+      <p class="small">Get updates on upcoming world tours and music festivals this season.</p>
+      <hr>
+      <h4>🎭 Culture & Art</h4>
+      <p class="small">Exploring how modern artists are shaping pop culture through creativity and innovation.</p>
+    </aside>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PulsePoint News | Entertainment Desk</p>
+    <p>All the buzz. All the spotlight. All in one place.</p>
+  </footer>
+</body>
+</html>

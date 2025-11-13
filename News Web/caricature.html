@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caricature | PulsePoint News</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- GLOBAL STYLES --- */
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      background: #fffef9;
+      color: #333;
+    }
+
+    /* --- NAVBAR --- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      padding: 12px 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #fdd835;
+    }
+
+    /* --- HEADER SECTION --- */
+    .section-header {
+      background: linear-gradient(135deg, #ffeb3b, #ff7043);
+      color: #222;
+      text-align: center;
+      padding: 100px 20px 70px;
+      margin-top: 60px;
+      text-shadow: 1px 1px 4px rgba(255,255,255,0.6);
+    }
+
+    .section-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      font-family: "Comic Sans MS", "Poppins", sans-serif;
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 15px auto;
+      opacity: 0.9;
+    }
+
+    /* --- ARTICLES LAYOUT --- */
+    .articles {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 60px 40px;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .feed {
+      flex: 3;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      width: 360px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 3px solid #ffca28;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-bottom: 3px solid #ffca28;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h4 {
+      color: #e65100;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .card-body p {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .read-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #ff9800;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .read-btn:hover {
+      background: #e65100;
+    }
+
+    /* --- SIDEBAR --- */
+    .side {
+      flex: 1;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 25px;
+      height: fit-content;
+      border-left: 5px solid #fdd835;
+    }
+
+    .side h4 {
+      color: #e65100;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .side .small {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .side hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 20px 0;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      background: #fdd835;
+      color: #000;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #ff7043;
+      color: #fff;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      background: #222;
+      color: #fff;
+      padding: 25px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+      .articles {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .side {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  </style>
+</head>
+
+<body class="caricature-page">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="site-title"><a href="index.html">PulsePoint News</a></h2>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="editorial.html">Editorial</a>
+        <a href="entertainment.html">Entertainment</a>
+        <a href="sports.html">Sports</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="caricature.html" class="active">Caricature</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="section-header">
+    <h1>Caricature & Comics</h1>
+    <p>Satire, political cartoons, and comic art — truth with a twist of humor.</p>
+  </header>
+
+    <!-- Main Articles -->
+  <section class="articles">
+    <div class="feed">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200" alt="City Hall Chronicles">
+        <div class="card-body">
+          <h4>Cartoon: City Hall Chronicles</h4>
+          <p>A weekly satirical cartoon capturing the funny side of politics and daily bureaucracy.</p>
+          <a href="#" class="read-btn">View Cartoon</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img style="object-fit: contain;" src="caricature.jpg" alt="Life in Lines">
+        <div class="card-body">
+          <h4>Comic Strip: Life in Lines</h4>
+          <p>Everyday chaos turned into clever humor — short strips that will make you smile and think.</p>
+          <a href="#" class="read-btn">Read More</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img style="object-fit: contain;" src="caricature2.jpg" alt="Satire Feature">
+        <div class="card-body">
+          <h4>Feature: Satire in Modern Media</h4>
+          <p>Exploring how artists use caricature to tackle serious topics through humor and exaggeration.</p>
+          <a href="#" class="read-btn">Explore</a>
+        </div>
+      </article>
+    </div>
+
+
+    <!-- Sidebar -->
+    <aside class="side">
+      <h4>🎨 Artist Spotlight</h4>
+      <p class="small">Meet the cartoonist behind this week’s viral illustration on local politics.</p>
+      <hr>
+      <h4>🗞️ Behind the Panels</h4>
+      <p class="small">An inside look at the creative process behind editorial comics.</p>
+      <hr>
+      <h4>🖋️ Submit Your Work</h4>
+      <p class="small">Got a comic idea or caricature? Send it to our art team for a feature!</p>
+      <a href="contact.html" class="submit-btn">Submit Art</a>
+    </aside>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PulsePoint News | Caricature Desk</p>
+    <p>“When truth meets humor, art is born.”</p>
+  </footer>
+</body>
+</html>

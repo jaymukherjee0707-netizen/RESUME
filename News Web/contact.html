@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | PulsePoint News</title>
+  <style>
+    /* --- GLOBAL --- */
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      background: #fffef9;
+      color: #333;
+    }
+
+    /* --- NAVBAR --- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      padding: 12px 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #fdd835;
+    }
+
+    /* --- HEADER --- */
+    .section-header {
+      background: linear-gradient(135deg, #42a5f5, #00bcd4);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px 70px;
+      margin-top: 60px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    .section-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin: 15px auto;
+      opacity: 0.9;
+    }
+
+    /* --- MAIN CONTENT --- */
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 40px;
+    }
+
+    /* --- INFO PANEL --- */
+    .info-panel {
+      flex: 1;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      padding: 25px 30px;
+      border-left: 5px solid #42a5f5;
+    }
+
+    .info-panel h4 {
+      color: #0277bd;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .info-panel p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .info-panel hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 20px 0;
+    }
+
+    /* --- FORM PANEL --- */
+    .form-panel {
+      flex: 1;
+      min-width: 340px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      padding: 25px 30px;
+      border-left: 5px solid #00bcd4;
+    }
+
+    .form-panel h4 {
+      color: #0277bd;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .form-panel form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .form-panel input,
+    .form-panel textarea {
+      font-family: inherit;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-panel input:focus,
+    .form-panel textarea:focus {
+      border-color: #42a5f5;
+      outline: none;
+    }
+
+    .submit-btn {
+      background: #42a5f5;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 12px 25px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      align-self: flex-end;
+    }
+
+    .submit-btn:hover {
+      background: #0288d1;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      background: #222;
+      color: #fff;
+      padding: 25px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="contact-page">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="site-title"><a href="index.html">PulsePoint News</a></h2>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="editorial.html">Editorial</a>
+        <a href="entertainment.html">Entertainment</a>
+        <a href="sports.html">Sports</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="caricature.html">Caricature</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="section-header">
+    <h1>Contact Us</h1>
+    <p>Have tips, story ideas, or partnership inquiries? Get in touch with the PulsePoint newsroom.</p>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-container">
+    <!-- Contact Info -->
+    <div class="info-panel">
+      <h4>📰 News Desk</h4>
+      <p>Email: <strong>news@pulsepointnews.com</strong></p>
+      <p>Tips via secure form: use the message box.</p>
+      <hr>
+      <h4>💼 Business Inquiries</h4>
+      <p>Partnerships: <strong>partnerships@pulsepointnews.com</strong></p>
+      <p>Advertising: <strong>ads@pulsepointnews.com</strong></p>
+      <hr>
+      <h4>📍 Location</h4>
+      <p>PulsePoint HQ — Manila, Philippines</p>
+      <p>Office Hours: Mon–Fri, 9AM–6PM</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="form-panel">
+      <h4>✉️ Send us a message</h4>
+      <form onsubmit="alert('This is a demo — your message was not sent.'); return false;">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="6" placeholder="Your Message..." required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PulsePoint News | Contact Desk — Manila</p>
+    <p>“Connecting stories, voices, and communities.”</p>
+  </footer>
+</body>
+</html>
