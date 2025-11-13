@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fashion | PulsePoint News</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* --- GLOBAL STYLES --- */
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      background-color: #fff9f9;
+      color: #333;
+    }
+
+    /* --- NAVBAR --- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(180, 70, 100, 0.95);
+      color: #fff;
+      padding: 12px 0;
+      z-index: 1000;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .site-title a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffd6e7;
+    }
+
+    /* --- HEADER SECTION --- */
+    .section-header {
+      background: linear-gradient(135deg, #ffb6c1, #ff80aa);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px 70px;
+      margin-top: 60px;
+    }
+
+    .section-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .section-header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 15px auto;
+      opacity: 0.9;
+    }
+
+    /* --- ARTICLES LAYOUT --- */
+    .articles {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 60px 40px;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .feed {
+      flex: 3;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      width: 360px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-body h4 {
+      color: #c2185b;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .card-body p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .read-btn {
+      display: inline-block;
+      background: #ff80aa;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .read-btn:hover {
+      background: #e64c7c;
+    }
+
+    /* --- SIDEBAR --- */
+    .side {
+      flex: 1;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      height: fit-content;
+    }
+
+    .side h4 {
+      color: #b03060;
+      margin-bottom: 10px;
+    }
+
+    .side .small {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .side hr {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 20px 0;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      background: #b03060;
+      color: #fff;
+      padding: 25px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+      .articles {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .side {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  </style>
+</head>
+
+<body class="fashion-page">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="site-title"><a href="index.html">PulsePoint News</a></h2>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="editorial.html">Editorial</a>
+        <a href="entertainment.html">Entertainment</a>
+        <a href="sports.html">Sports</a>
+        <a href="fashion.html" class="active">Fashion</a>
+        <a href="caricature.html">Caricature</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="section-header">
+    <h1>Fashion Forward</h1>
+    <p>Runway, street style, and design stories redefining modern aesthetics.</p>
+  </header>
+
+    <!-- Main Articles -->
+  <section class="articles">
+    <div class="feed">
+      <article class="card">
+        <img src="fashion.jpg" alt="Runway Review">
+        <div class="card-body">
+          <h4>Runway Review: A Season of Texture</h4>
+          <p>Designers brought rich fabrics, sculptural silhouettes, and bold colors to the runway — redefining elegance for 2025.</p>
+          <a href="#" class="read-btn">Read More</a>
+        </div>
+      </article>
+
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200" alt="Sustainable Labels">
+        <div class="card-body">
+          <h4>Sustainable Labels to Watch</h4>
+          <p>Emerging brands champion recycled textiles and ethical production, shaping the next wave of conscious fashion.</p>
+          <a href="#" class="read-btn">Read More</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200" alt="Street Style">
+        <div class="card-body">
+          <h4>Street Style: Global Trends Meet Local Culture</h4>
+          <p>From Seoul to Milan, the streets are the new runways — blending cultural heritage with modern flair.</p>
+          <a href="#" class="read-btn">Read More</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="side">
+      <h4>👗 Trend Report</h4>
+      <p class="small">Color palettes, textures, and key looks defining this season.</p>
+      <hr>
+      <h4>👜 Designer Spotlight</h4>
+      <p class="small">Profiles on leading creative directors shaping the global scene.</p>
+      <hr>
+      <h4>💄 Beauty Edit</h4>
+      <p class="small">Makeup and skincare trends that complement today’s fashion mood.</p>
+    </aside>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 PulsePoint News | Fashion Desk</p>
+    <p>Style. Elegance. Inspiration — every day.</p>
+  </footer>
+</body>
+</html>
